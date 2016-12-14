@@ -1,0 +1,37 @@
+﻿----- Prova PDI-----
+
+Questão 1:
+
+As técnicas de filtragem no domínio da frequência se baseiam na modificação da transformada de Fourier para atingir um objetivo específico e calcular a DFT inversa para retornar ao domínio da imagem.
+
+Filtro Passa-Altas (FPA): Altas frequências estão relacionadas a mudanças abruptas de intensidade
+Ele retira os componentes de baixa-frequência da imagem, ou seja, que estão abaixo da freqüência de corte (D0) definida na construção do filtro; Mantém na imagem apenas as altas-frequências, ou seja, que estão acima da freqüência de corte (D0); Não há realce de nenhum componente espectral da imagem. 
+
+
+Filtro passa-alta Butterworth:
+HBHPF = 1 − HBLPF
+
+Um filtro passa-alta Butterworth 2D de ordem n é definido como:
+H(µ, ν) = 			1
+			------------------
+			1 + [D0/D(µ, ν)]2n
+			
+onde D0 é a frequência de corte.
+
+Fazer:
+Importar img
+Exibir img inicial
+Levar para o domínio da frequência
+Aplicar Fourier
+Aplicar filtro passa-alta Butterworth
+Exibir espectro
+Aplicar Fourier inversa
+Exibir img resultante
+Aplicar limiarização (threshold)
+Exibir img final
+
+http://www.inf.ufg.br/~fabrizzio/mestrado/pdi/aulas/aula7.2.pdf
+http://iris.sel.eesc.usp.br/sel5895/Aula%207%20-%20Processamento%20do%20Dominio%20da%20Frequencia.pdf
+http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_transforms/py_fourier_transform/py_fourier_transform.html
+http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_transforms/py_fourier_transform/py_fourier_transform.html
+http://adessowiki.fee.unicamp.br/adesso/wiki/ia636-2009/lionisEX09/edit/
